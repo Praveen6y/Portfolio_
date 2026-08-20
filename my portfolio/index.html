@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Professional  portfolio of Boda Praveen. Computer Science SDE candidate specializing in DSA, Full-stack systems, and core computer science fundamentals.">
+    <meta name="author" content="Boda Praveen">
+    <title>Boda Praveen's Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Cursor Glow Effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Animated Background Blobs -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Interactive Background Grid -->
+    <div class="bg-grid"></div>
+
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-accent">&lt;</span>Boda<span class="logo-accent"> Praveen /&gt;</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#coding-profiles" class="nav-link">Coding Profiles</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="assets/resume.pdf" download class="btn btn-secondary nav-resume-btn"><i
+                        class="fa-solid fa-download"></i> Resume</a>
+                <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section section-padding">
+            <div class="container hero-grid">
+                <div class="hero-content scroll-reveal fade-in-left">
+                    <span class="hero-subtitle">Boda's Portfolio</span>
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Boda Praveen</span>
+                    </h1>
+                    <h2 class="hero-typing-container">
+                        I am an <span class="typing-text" id="typingText"></span><span class="typed-cursor">|</span>
+                    </h2>
+                    <p class="hero-description">
+                        Computer Science undergraduate at Institute of Aeronautical Engineering. Specialized in Data
+                        Structures
+                        & Algorithms, Backend Systems, and Full-Stack development.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View Projects <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                        <a href="assets/resume.pdf" download class="btn btn-secondary"><i
+                                class="fa-solid fa-file-arrow-down"></i> Resume</a>
+                    </div>
+                </div>
+                <div class="hero-media scroll-reveal fade-in-right">
+                    <div class="avatar-wrapper">
+                        <div class="avatar-glow"></div>
+                        <img src="assets/avatar.jpeg" alt="Boda Praveen" class="avatar-image" id="avatarImage">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section section-padding section-divider">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tag">About Me</span>
+                    <h2 class="section-title">Core Competencies</h2>
+                    <p class="section-subtitle"></p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-bio scroll-reveal fade-in-left">
+                        <h3>Education & Academics</h3>
+                        <div class="education-highlight">
+                            <h4>B.Tech in Computer Science & Engineering</h4>
+                            <p class="education-meta">Institute of Aeronautical Engineering,Hyderabad | 2023 - 2027</p>
+                            <div class="gpa-badge">
+                                <span class="gpa-label">CGPA:</span>
+                                <span class="gpa-value">8.03 / 10.0</span>
+                            </div>
+                        </div>
+                        <div class="education-highlight">
+                            <h4>Intermediate</h4>
+                            <p class="education-meta">K G Junior College,Narsampet | 2021 - 2023</p>
+                            <div class="gpa-badge">
+                                <span class="gpa-label">Marks :</span>
+                                <span class="gpa-value">910 / 1000</span>
+                            </div>
+                        </div>
+                        <div class="education-highlight">
+                            <h4>Matriculation</h4>
+                            <p class="education-meta">T S Model School,Budharaopet| 2021</p>
+                            <div class="gpa-badge">
+                                <span class="gpa-label">CGPA:</span>
+                                <span class="gpa-value">10.0 / 10.0</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="about-skills scroll-reveal fade-in-right">
+                        <h3>Technical Toolkit</h3>
+                        <div class="skills-container">
+                            <div class="skill-category">
+                                <h4>Programming Languages</h4>
+                                <div class="skills-list">
+                                    <!-- <span class="skill-pill"><i class="fa-solid fa-code"></i> C++</span> -->
+                                    <span class="skill-pill">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-plain.svg"
+                                            alt="Java" width="16" height="16"> Java</span>
+                                    <span class="skill-pill">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                            alt="Python" width="16" height="16"> Python</span>
+                                    <span class="skill-pill">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-plain.svg"
+                                            alt="C#" width="16" height="16"> C#</span>
+                                    <span class="skill-pill">
+                                        <img src="https://cdn.simpleicons.org/dart/0175C2" alt="Dart" width="16"
+                                            height="16">
+                                        Dart
+                                    </span>
+
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>CS Fundamentals & Dev</h4>
+                                <div class="skills-list">
+                                    <span class="skill-pill"><i class="fa-solid fa-brain"></i> DSA</span>
+                                    <span class="skill-pill"><i class="fa-solid fa-cubes"></i> OOPs</span>
+                                    <span class="skill-pill"><i class="fa-solid fa-database"></i> DBMS</span>
+                                    <span class="skill-pill"><i class="fa-solid fa-microchip"></i> Operating Systems
+                                        (OS)</span>
+                                    <span class="skill-pill"><i class="fa-solid fa-network-wired"></i> Computer Networks
+                                        (CN)</span>
+                                    <span class="skill-pill"><i class="fa-solid fa-sitemap"></i> System Design</span>
+                                    <span class="skill-pill"><i class="fa-brands fa-git-alt"></i> Git & GitHub</span>
+                                    <!-- <span class="skill-pill"><i class="fa-brands fa-react"></i> React.js</span>
+                                    <span class="skill-pill"><i class="fa-brands fa-node-js"></i> Node.js &
+                                        Express</span>
+                                    <span class="skill-pill"><i class="fa-solid fa-server"></i> Rest APIs /
+                                        WebSockets</span>
+                                    <span class="skill-pill"><i class="fa-brands fa-docker"></i> Docker</span> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Coding Profiles Section -->
+        <section id="coding-profiles" class="coding-profiles-section section-padding section-divider">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tag">Competitive Coding</span>
+                    <h2 class="section-title">Coding Ranks & Profiles</h2>
+                    <p class="section-subtitle">Active participation in competitive programming and problem-solving
+                        platforms.</p>
+                </div>
+
+                <div class="profiles-slider-wrapper">
+                    <button class="slider-btn prev-profile-btn" aria-label="Previous Profile"><i
+                            class="fa-solid fa-chevron-left"></i></button>
+                    <div class="profiles-grid">
+                        <!-- Leetcode -->
+                        <div class="profile-card scroll-reveal fade-in-up">
+                            <div class="profile-platform-header">
+                                <i class="fa-solid fa-circle-nodes platform-icon leetcode-color"></i>
+                                <h3>LeetCode</h3>
+                            </div>
+                            <div class="profile-stat-box">
+                                <div class="profile-stat-item">
+                                    <span class="profile-stat-val">140+</span>
+                                    <span class="profile-stat-lbl">Solved</span>
+                                </div>
+                                <div class="profile-stat-item">
+                                    <span class="profile-stat-val">1+</span>
+                                    <span class="profile-stat-lbl">Badges</span>
+                                </div>
+                            </div>
+                            <p class="profile-desc">Consistent problem solver focusing on Arrays, Dynamic Programming,
+                                Graphs, and Tree structures</p>
+                            <a href="https://leetcode.com/u/praveen_boda/" target="_blank" class="profile-btn-link">Open
+                                Profile <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+
+                        <!-- Codechef -->
+                        <div class="profile-card scroll-reveal fade-in-up" style="animation-delay: 0.1s;">
+                            <div class="profile-platform-header">
+                                <i class="fa-solid fa-code-fork platform-icon codechef-color"></i>
+                                <h3>Codechef</h3>
+                            </div>
+                            <div class="profile-stat-box">
+                                <div class="profile-stat-item">
+                                    <span class="profile-stat-val">2+</span>
+                                    <span class="profile-stat-lbl">Badges</span>
+                                </div>
+                                <div class="profile-stat-item">
+                                    <span class="profile-stat-val">290+</span>
+                                    <span class="profile-stat-lbl">Problems solved</span>
+                                </div>
+                            </div>
+                            <p class="profile-desc">Competitive coder participating in weekly divisions. Strong
+                                foundation
+                                in Math, Greedy Algorithms, and Number Theory.</p>
+                            <a href="https://www.codechef.com/users/praveen6y" target="_blank"
+                                class="profile-btn-link">Open
+                                Profile <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+
+                        <!-- GitHub Stats -->
+                        <div class="profile-card scroll-reveal fade-in-up" style="animation-delay: 0.2s;">
+                            <div class="profile-platform-header">
+                                <i class="fa-brands fa-github platform-icon github-color"></i>
+                                <h3>GitHub</h3>
+                            </div>
+                            <div class="profile-stat-box">
+                                <div class="profile-stat-item">
+                                    <span class="profile-stat-val">20+</span>
+                                    <span class="profile-stat-lbl">Commits</span>
+                                </div>
+                                <div class="profile-stat-item">
+                                    <span class="profile-stat-val">4</span>
+                                    <span class="profile-stat-lbl">Repos</span>
+                                </div>
+                            </div>
+                            <p class="profile-desc">Host of core projects, and open-source
+                                contributions. Committed to clean code guidelines.</p>
+                            <a href="https://github.com/Praveen6y" target="_blank" class="profile-btn-link">Open Github
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                        <!-- hacker rank -->
+                        <div class="profile-card scroll-reveal fade-in-up">
+                            <div class="profile-platform-header">
+                                <i class="fa-solid fa-hackerrank"></i>
+                                <h3>Hackerrank</h3>
+                            </div>
+                            <div class="profile-stat-box">
+                                <div class="profile-stat-item">
+                                    <span class="profile-stat-val">300+</span>
+                                    <span class="profile-stat-lbl">Hackos</span>
+                                </div>
+                                <div class="profile-stat-item">
+                                    <span class="profile-stat-val">4-Star</span>
+                                    <span class="profile-stat-lbl">SQL</span>
+                                </div>
+                            </div>
+                            <p class="profile-desc">Hackerrank is a website that allows you to practice coding problems
+                                and
+                                participate in coding competitions. I use hackerrank to practice my coding skills and to
+                                prepare for coding interviews. I have a good understanding of data structures and
+                                algorithms, and I am able to solve a wide range of coding problems.</p>
+                            <a href="https://www.hackerrank.com/profile/praveenboda2005" target="_blank"
+                                class="profile-btn-link">Open
+                                Profile <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+
+
+
+
+                    </div>
+                    <button class="slider-btn next-profile-btn" aria-label="Next Profile"><i
+                            class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section section-padding section-divider">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tag">Academic Work</span>
+                    <h2 class="section-title">Projects</h2>
+                    <p class="section-subtitle">A collection of custom applications demonstrating systems depth and
+                        product engineering.</p>
+                </div>
+
+
+
+                <div class="projects-slider-wrapper">
+                    <button class="slider-btn prev-btn" aria-label="Previous Project"><i
+                            class="fa-solid fa-chevron-left"></i></button>
+                    <div class="projects-grid">
+                        <!-- Project 1 (Systems) -->
+                        <div class="project-card scroll-reveal fade-in-up">
+                            <div class="project-media">
+                                <img src="assets/project1.png" alt="Weather Application">
+                                <div class="project-overlay">
+                                    <div class="project-links">
+                                        <a href="https://weather-application-project1.vercel.app" target="_blank"
+                                            class="project-link-btn" aria-label="View Demo"><i
+                                                class="fa-solid fa-link"></i></a>
+                                        <a href="https://github.com/Praveen6y/weather-application" target="_blank"
+                                            class="project-link-btn" aria-label="View Github"><i
+                                                class="fa-brands fa-github"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <span class="project-category">Weather Application</span>
+                                <h3>Weather Application</h3>
+                                <p>shows the real-time weather conditions of any city worldwide. And that allows to show
+                                    the
+                                    current location including the UV index.</p>
+                                <div class="project-tags">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JAVASCRIPT</span>
+                                    <span>WEATHER API</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 2 (Fullstack) -->
+                        <div class="project-card scroll-reveal fade-in-up" data-category="fullstack"
+                            style="animation-delay: 0.1s;">
+                            <div class="project-media">
+                                <img src="assets/logo1.jpg" alt="personal expense tracker">
+                                <div class="project-overlay">
+                                    <div class="project-links">
+                                        <a href="https://personal-expense-tracker-lilac.vercel.app/login.html"
+                                            target="_blank" class="project-link-btn" aria-label="View Demo"><i
+                                                class="fa-solid fa-link"></i></a>
+
+                                        <a href="https://github.com/Praveen6y/PET" class="project-link-btn"
+                                            aria-label="View Github"><i class="fa-brands fa-github"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <span class="project-category">Expense tracker</span>
+                                <h3>Personal Expense Tracker</h3>
+                                <p>Personal expense tracker web application allows users to track their daily expenses
+                                    and
+                                    income. It provides a simple and intuitive interface for users to add, edit, and
+                                    delete
+                                    their expenses and income. </p>
+                                <div class="project-tags">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JAVASCRIPT</span>
+                                    <span>FIREBASE</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 3 (Applications) -->
+                        <!-- <div class="project-card scroll-reveal fade-in-up" data-category="applications"
+                            style="animation-delay: 0.2s;">
+                            <div class="project-media">
+                                <img src="assets/project3.png" alt="Smart Attendance Website">
+                                <div class="project-overlay">
+                                    <div class="project-links">
+                                        <a href="#" class="project-link-btn" aria-label="View Demo"><i
+                                                class="fa-solid fa-link"></i></a>
+                                        <a href="#" class="project-link-btn" aria-label="View Github"><i
+                                                class="fa-brands fa-github"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <span class="project-category">Applications</span>
+                                <h3>Smart Attendance Website</h3>
+                                <p>The website allows users to mark their attendance and view their attendance history.
+                                    It
+                                    provides a simple and intuitive interface for users to mark their attendance and
+                                    view
+                                    their
+                                    attendance history. </p>
+                                <div class="project-tags">
+                                    <span>HTML</span>
+                                    <span>Redis Pub/Sub</span>
+                                    <span>WebSockets</span>
+                                    <span>Docker</span>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- Project 4 -->
+                        <div class="project-card scroll-reveal fade-in-up" data-category="fullstack"
+                            style="animation-delay: 0.1s;">
+                            <div class="project-media">
+                                <img src="assets/logo3.png" alt="My portfolio">
+                                <div class="project-overlay">
+                                    <div class="project-links">
+                                        <a href="#" target="_blank" class="project-link-btn" aria-label="View Demo"><i
+                                                class="fa-solid fa-link"></i></a>
+
+                                        <a href="#" class="project-link-btn" aria-label="View Github"><i
+                                                class="fa-brands fa-github"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <span class="project-category"></span>
+                                <h3>My Portfolio</h3>
+                                <p>This is my personal portfolio website which i created to showcase my skills and
+                                    projects.
+                                    It provides a simple and intuitive interface to view my projects and
+                                    learn
+                                    more about me. </p>
+                                <div class="project-tags">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JAVASCRIPT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slider-btn next-btn" aria-label="Next Project"><i
+                            class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications-section section-padding section-divider">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tag">Credentials</span>
+                    <h2 class="section-title">Certifications & Achievements</h2>
+                    <p class="section-subtitle">Verified industry credentials and professional specializations.</p>
+                </div>
+
+                <div class="certifications-slider-wrapper">
+                    <button class="slider-btn prev-cert-btn" aria-label="Previous Certificate"><i
+                            class="fa-solid fa-chevron-left"></i></button>
+                    <div class="certifications-grid">
+                        <!-- Certificate 1 -->
+                        <div class="cert-card scroll-reveal fade-in-up">
+                            <div class="cert-header">
+                                <div class="cert-icon-wrapper">
+                                    <img src="assets/tata.webp" alt="tata">
+                                </div>
+                                <div>
+                                    <span class="cert-provider">TATA</span>
+                                    <h3>FORAGE AND TATA</h3>
+                                </div>
+                            </div>
+                            <p class="cert-date"><i class="fa-regular fa-calendar-days"></i> Issued: jul 2026</p>
+                            <p class="cert-desc">GenAI job simulation program provided by TATA in collaboration with
+                                FORAGE.
+                                The
+                                program covers fundamental concepts of Generative AI, including model architectures,
+                                prompt
+                                engineering, and ethical considerations.</p>
+                            <div class="cert-actions">
+                                <button class="btn btn-secondary cert-view-btn"
+                                    onclick="window.open('https://drive.google.com/file/d/1jmIuPrkG3H5eD1IJZRFKmuJBuuBXBnjP/view?usp=drive_link', '')">
+                                    <i class="fa-solid fa-eye"></i> View Certificate
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Certificate 2 -->
+                        <div class="cert-card scroll-reveal fade-in-up" style="animation-delay: 0.1s;">
+                            <div class="cert-header">
+                                <div class="cert-icon-wrapper">
+
+                                    <img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" />
+
+                                </div>
+                                <div>
+                                    <span class="cert-provider">LinkedIn Learning</span>
+                                    <h3>SQL Programming</h3>
+                                </div>
+                            </div>
+                            <p class="cert-date"><i class="fa-regular fa-calendar-days"></i> Issued: Aug 2025 • Active
+                            </p>
+                            <p class="cert-desc">Learning SQL programming. The course covers fundamental concepts of
+                                SQL,
+                                including database design, querying, and data manipulation.</p>
+                            <div class="cert-actions">
+                                <button class="btn btn-secondary cert-view-btn"
+                                    onclick="window.open('https://drive.google.com/file/d/1FfFMK4Ju29iNyQngOtWt776YZEEavYVZ/view?usp=drive_link', '')">
+                                    <i class="fa-solid fa-eye"></i> View Certificate
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Certificate 3 -->
+                        <div class="cert-card scroll-reveal fade-in-up" style="animation-delay: 0.2s;">
+                            <div class="cert-header">
+                                <div class="cert-icon-wrapper">
+                                    <img src="assets/nptel.jpg" alt="nptel">
+                                </div>
+                                <div>
+                                    <span class="cert-provider">NPTEL JAVA</span>
+                                    <h3>JAVA</h3>
+                                </div>
+                            </div>
+                            <p class="cert-date"><i class="fa-regular fa-calendar-days"></i> Issued: May 2025 • Active
+                            </p>
+                            <p class="cert-desc">Successfully completed certification in Java programming offered by
+                                NPTEL,
+                                which covered fundamental concepts of Java, object-oriented programming, and data
+                                structures.</p>
+                            <div class="cert-actions">
+                                <button class="btn btn-secondary cert-view-btn"
+                                    onclick="window.open('https://drive.google.com/file/d/1eNljccfI8oD93hTxFAHGTNFcj_JowHYw/view?usp=drive_link', '')">
+                                    <i class="fa-solid fa-eye"></i> View Certificate
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Certificate 4 -->
+                        <div class="cert-card scroll-reveal fade-in-up">
+                            <div class="cert-header">
+                                <div class="cert-icon-wrapper">
+                                    <img src="assets/samsung.png" alt="tata">
+                                </div>
+                                <div>
+                                    <span class="cert-provider">SAMSUNG</span>
+                                    <h3>AI</h3>
+                                </div>
+                            </div>
+                            <p class="cert-date"><i class="fa-regular fa-calendar-days"></i> Issued: Jan 2026</p>
+                            <p class="cert-desc">Samsung provided the AI course for the campus students, where I got
+                                the opportunity to learn AI and Machine Learning.</p>
+                            <div class="cert-actions">
+                                <button class="btn btn-secondary cert-view-btn"
+                                    onclick="window.open('https://drive.google.com/file/d/1ilEZkdUuOAc587uIBSjNGK0niTKZKxiY/view?usp=drive_link', '')">
+                                    <i class="fa-solid fa-eye"></i> View Certificate
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button class="slider-btn next-cert-btn" aria-label="Next Certificate"><i
+                            class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tag">Get in Touch</span>
+                    <h2 class="section-title">Let's Connect</h2>
+                    <p class="section-subtitle">Interested in my profile? Send a message directly or connect via
+                        LinkedIn / Email / Whatsapp.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info scroll-reveal fade-in-left">
+                        <h3>Boda's Portfolio</h3>
+                        <p>I am actively preparing for technical rounds, online assessments (OAs), and SDE interviews.
+                            Reach out if you're looking for enthusiastic talent!</p>
+
+                        <div class="contact-methods">
+                            <div class="contact-method-item">
+                                <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <h4>Email Address</h4>
+                                    <a href="mailto:praveenboda2005@gmail.com">praveenboda2005@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-method-item">
+                                <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <h4>Location</h4>
+                                    <span>Hyderabad, Telangana</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links-container">
+                            <h4>Find me on</h4>
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/in/praveeen56y/" target="_blank"
+                                    aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://github.com/Praveen6y" target="_blank" aria-label="GitHub"><i
+                                        class="fa-brands fa-github"></i></a>
+                                <a href="https://leetcode.com/u/praveen_boda/" target="_blank" aria-label="LeetCode"><i
+                                        class="fa-solid fa-code"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper scroll-reveal fade-in-right">
+                        <form id="contactForm" class="contact-form" novalidate>
+                            <div class="form-group">
+                                <input type="text" id="formName" required placeholder=" ">
+                                <label for="formName">Full Name</label>
+                                <span class="form-error-msg" id="nameError">Name is required</span>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" id="formEmail" required placeholder=" ">
+                                <label for="formEmail">Email Address</label>
+                                <span class="form-error-msg" id="emailError">Please enter a valid email</span>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea id="formMessage" required rows="5" placeholder=" "></textarea>
+                                <label for="formMessage">Your Message</label>
+                                <span class="form-error-msg" id="messageError">Message cannot be empty</span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <span>Submit Inquiry</span>
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <span class="footer-copyright">&copy; 2026 Boda Praveen</span>
+            <div class="footer-bottom-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="assets/resume.pdf" download>Resume</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Certificate Lightbox Modal -->
+    <div id="certModal" class="cert-modal">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content-wrapper">
+            <img class="modal-content-img" id="modalImg" src="" alt="Certificate Preview">
+            <div id="caption"></div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
